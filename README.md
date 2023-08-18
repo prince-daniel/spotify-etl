@@ -1,13 +1,24 @@
-# Architecture
+# 📐✏️ Architecture
 ![alt text](https://github.com/prince-daniel/spotify-etl/blob/main/Architecture.jpg)
-- Asynchronous API calls are made to Spotify to extract the data.
-- DynamoDB table has flag columns which supports the ETL process
-- Data once extracted are stored in S3 raw bucket as parquet file.
-- Raw bucket is then consumed by Databricks for Transformation.
-- Transformed data are stored as external delta table (Some ad-hoc queries can be run on the delta table)
-- Data is then loaded onto Redshift using Python by executing COPY command.
+## 🏗️ Data Extraction 
+The project is hosted on an EC2 instance. Asynchronous API calls are utilized to interact with the Spotify API, efficiently extracting data from a diverse range of around 155 artists.
+
+## 🗄️ ETL Operations Data Storage
+Leveraging the flexibility of DynamoDB, I've set up a table with flag columns that seamlessly support the ETL process.
+
+## 📦 Raw Data Storage 
+Extracted data is then stored in an S3 raw bucket. I've chosen the optimized Parquet file format to ensure efficient storage.
+
+## 🔄 Transformation with Databricks 
+The power of Databricks is harnessed for data transformation. The raw data residing in the S3 bucket is ingested, transformed, and optimized, resulting in a refined dataset ready for serving.
+
+## 📅 Delta Tables
+The transformed data is stored as an external delta table, Harnessing the features & capabilities of Delta Lake.
+
+## 🚚 Data Loading into Redshift 
+Python script is utilized to execute the COPY command, efficiently transferring the data into Amazon Redshift. This robust process ensures that the data is available for further exploration and visualization.
   
-# Redshift DDL
+# ⚒️ Redshift DDL
 ```
 CREATE TABLE spotify.albums (
     id TEXT,
@@ -47,9 +58,11 @@ CREATE TABLE spotify.tracks (
     image TEXT,
     href TEXT
 )
-DISTKEY (artist_id) -- Distribute by artist ID
+DISTKEY (artist_id)
 SORTKEY (album_id);
 ```
 
-# Dashboard
+# 📊 Dashboard
 ![alt text](https://github.com/prince-daniel/spotify-etl/blob/main/TheWeeknd.jpg)
+
+#### 🙆‍♂️I'll add more artists in the future
