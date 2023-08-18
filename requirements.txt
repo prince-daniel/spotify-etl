@@ -1,0 +1,11 @@
+boto3
+polars
+requests
+pandas
+sqlalchemy
+pyarrow
+connectorx>=0.3.1
+sqlalchemy-redshift
+fsspec
+s3fs
+aiohttp
