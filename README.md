@@ -1,7 +1,7 @@
 # 📐✏️ Architecture
 ![alt text](https://github.com/prince-daniel/spotify-etl/blob/main/Architecture.jpg)
 ## 🏗️ Data Extraction 
-The project is hosted on an EC2 instance. Asynchronous API calls are utilized to interact with the Spotify API, efficiently extracting data from a diverse range of around 155 artists.
+Extraction scripts are hosted on an EC2 instance. Asynchronous API calls are utilized to interact with the Spotify API, efficiently extracting data from a diverse range of around 155 artists.
 
 ## 🗄️ ETL Operations Data Storage
 Leveraging the flexibility of DynamoDB, I've set up a table with flag columns that seamlessly support the ETL process.
