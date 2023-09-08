@@ -66,6 +66,8 @@ SORTKEY (album_id);
 
 
 # 📊 Dashboard
+Checkout your favorite artists here 👉 ![alt text](https://rebrand.ly/spotify-artist-dashboard)
+
 ![alt text](https://github.com/prince-daniel/spotify-etl/blob/main/TheWeeknd.jpg)
 
 #### 🙆‍♂️I'll add more artists in the future
