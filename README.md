@@ -62,7 +62,7 @@ DISTKEY (artist_id)
 SORTKEY (album_id);
 ```
 # 🔗 Data Modelling
-![alt text]https://github.com/prince-daniel/spotify-etl/blob/main/modelling.jpg
+![alt text](https://github.com/prince-daniel/spotify-etl/blob/main/modelling.jpg)
 
 
 # 📊 Dashboard
